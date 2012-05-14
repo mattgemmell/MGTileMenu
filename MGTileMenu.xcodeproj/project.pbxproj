@@ -60,8 +60,8 @@
 		C9076AD114D31AA500560118 /* MGTileMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTileMenuController.h; sourceTree = "<group>"; };
 		C9076AD214D31AA500560118 /* MGTileMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTileMenuController.m; sourceTree = "<group>"; };
 		C908277D155D1E11002FEA82 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
-		C9082780155D30F9002FEA82 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		C9082782155D5242002FEA82 /* LICENSE.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.markdown; sourceTree = "<group>"; };
+		C9082780155D30F9002FEA82 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
+		C9082782155D5242002FEA82 /* LICENSE.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.markdown; path = ../LICENSE.markdown; sourceTree = "<group>"; };
 		C9082784155D57CE002FEA82 /* instinctivecode_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instinctivecode_logo.png; sourceTree = "<group>"; };
 		C9082789155D5C7C002FEA82 /* instinctivecode_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "instinctivecode_logo@2x.png"; sourceTree = "<group>"; };
 		C923BB74155BEE66004FA2CF /* green_gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green_gradient@2x.png"; sourceTree = "<group>"; };
