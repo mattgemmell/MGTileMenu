@@ -640,7 +640,7 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 	closeCenter.y -= newFrame.origin.y;
 	_closeButton.center = closeCenter;
 	_closeButton.hidden = !_closeButtonVisible;
-	_closeButton.userInteractionEnabled = _closeButtonVisible;
+	_closeButton.userInteractionEnabled = NO;
 	
 	// Position tiles.
 	for (UIButton *tileButton in _tileButtons) {
@@ -820,6 +820,12 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 															  userInfo:nil];
 			
 			_appeared = YES;
+			
+			NSInvocation *inv = [NSInvocation invocationWithMethodSignature:[_closeButton methodSignatureForSelector:@selector(setUserInteractionEnabled:)]];
+			[inv setSelector:@selector(setUserInteractionEnabled:)];
+			[inv setTarget:_closeButton];
+			[inv setArgument:&_closeButtonVisible atIndex:2];
+			[inv performSelector:@selector(invoke) withObject:nil afterDelay:(0.5)];
 		}
 		
 		if ([name isEqualToString:MG_ANIMATION_TILES]) {
@@ -959,7 +965,6 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 				[tileButton setBackgroundImage:nil forState:UIControlStateHighlighted];
 				[tileButton setAccessibilityLabel:nil];
 				[tileButton setAccessibilityHint:nil];
-				tileButton.userInteractionEnabled = YES;
 				tileButton.alpha = 1.0;
 				
 				[UIView transitionWithView:tileButton 
@@ -983,7 +988,6 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 				if (_delegate && [_delegate respondsToSelector:@selector(isTileEnabled:inMenu:)]) {
 					tileEnabled = [_delegate isTileEnabled:currentTileIndex inMenu:self];
 				}
-				tileButton.userInteractionEnabled = tileEnabled;
 				tileButton.alpha = ((tileEnabled) ? 1.0 : MG_DISABLED_TILE_OPACITY);
 				
 				if (_appeared) {
@@ -1080,6 +1084,7 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 	
 	// Begin an appropriate tile-animation.
 	_pageButton.userInteractionEnabled = NO;
+	[self setAllTilesInteractionEnabled:NO];
 	if (_animatingTiles) {
 		_tileAnimationInterrupted = YES;
 		for (UIButton *tileButton in _tileButtons) {
