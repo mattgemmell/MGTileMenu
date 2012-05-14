@@ -11,6 +11,8 @@ by Matt Gemmell
 
 MGTileMenu is an iOS GUI component, providing a pop-up tile-based contextual menu. It's designed for iOS 5, and uses ARC. It supports Retina and non-Retina devices, and works with VoiceOver. MGTileMenu is designed for use on iPad, but it will also work on iPhone and iPod touch.
 
+You can [read all about MGTileMenu (and its design) here](http://mattgemmell.com/2012/05/14/mgtilemenu/).
+
 MGTileMenu is released under an attribution license for free, and can also be licensed without the attribution requirement for a modest fee. MGTileMenu has no external dependencies.
 
 Tile menus show five icon-tiles per 'page', with a sixth page-switching tile ("...") used to switch to successive pages of tiles. You can have any number of pages of tiles.
@@ -44,7 +46,7 @@ The remaining files in the Xcode project are included for demonstration purposes
 
 ## Downloading the code
 
-You can [get MGTileMenu on github](http://github.com/mattgemmell).
+You can [get MGTileMenu on github](http://github.com/mattgemmell/MGTileMenu).
 
 
 
@@ -56,7 +58,7 @@ MGTileMenu is released under its own attribution license (which is included with
 
 ## Support, bugs and feature requests
 
-There is absolutely **no support** offered with this component. You're on your own! If you want to submit a feature request, please do so via the issue tracker on github.
+There is absolutely **no support** offered with this component. You're on your own! If you want to submit a feature request, please do so via [the issue tracker on github](http://github.com/mattgemmell/MGTileMenu/issues).
 
 If you want to submit a bug report, please also do so via the issue tracker, including a diagnosis of the problem and a suggested fix (in code). If you're using MGTileMenu, you're a developer - so I expect you to do your homework and provide a fix along with each bug report. You can also submit pull requests or patches.
 
