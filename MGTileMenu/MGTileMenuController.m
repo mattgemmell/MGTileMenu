@@ -349,7 +349,7 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 	CGGradientRef gradient = CGGradientCreateWithColorComponents(rgb, gradientColors, locations, 2);
 	CGColorSpaceRelease(rgb);
 	
-	return gradient;
+	return gradient; // follows the "Create rule"; i.e. must be released by caller (even with ARC)
 }
 
 
@@ -901,7 +901,6 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 - (void)animateTilesForCurrentPage
 {
 	// Determine which animation (to or from centre) to perform.
-	// Unneeded tiles are hidden and kept in the centre (without animation).
 	CGPoint centrePoint = MGCenterPoint([self frameForCenteredTile]);
 	CGPoint tileCentre;
 	CABasicAnimation *tileAnimation;

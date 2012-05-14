@@ -73,7 +73,7 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 - (CGRect)frameForCenteredTile;
 - (UIImage *)tileBackgroundImageHighlighted:(BOOL)highlighted;
 - (UIImage *)tileBackgroundImageForTile:(NSInteger)tileNumber highlighted:(BOOL)highlighted;
-- (void)tileActivated:(id)sender; // action for each tile is actually activated/chosen, switched on tag index.
+- (void)tileActivated:(id)sender; // action for when each tile is actually activated/chosen, switched on tag index.
 - (void)tileSelected:(id)sender; // action for when each tile is highlighted, switched on tag index.
 - (void)tileDeselected:(id)sender; // action for each tile is unhighlighted, switched on tag index.
 - (void)animateTilesForCurrentPage;
